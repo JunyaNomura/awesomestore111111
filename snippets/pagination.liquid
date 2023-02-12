@@ -1,0 +1,19 @@
+{%if pagination_variable.pages > 1 %}
+  <div class="inline-block">
+    {% if pagination_variable.previous.is_link %}
+      <a href="{{ pagination_variable.previous.url }}" class="text-black py-2 p-8 mx-1 border no-underline hover:bg-gray-100 duration-200">
+        {{ pagination_variable.previous.title }}
+      </a>
+    {% endif %}
+
+    {% for page in pagination_variable.parts %}
+      <a href="{{ page.url }}" class="text-black py-2 p-8 mx-1 border no-underline hover:bg-gray-100 duration-200">{{ page.title }}</a>
+    {% endfor %}
+
+    {% if pagination_variable.next.is_link %}
+      <a href="{{ pagination_variable.next.url }}" class="text-black py-2 p-8 mx-1 border no-underline hover:bg-gray-100 duration-200">
+        {{ pagination_variable.next.title }}
+      </a>
+    {% endif %}
+  </div>
+{% endif %}
