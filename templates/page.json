@@ -1,7 +1,7 @@
 {
   "sections": {
     "hello": {
-      "type": "hello",
+      "type": "main-product",
       "settings": {
       }
     }
